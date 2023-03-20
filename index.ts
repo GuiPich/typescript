@@ -7,14 +7,21 @@ class Person {
         this.age = age;
     }
 
-    tellMyName(): string {
-        return `I am ${this.name}`;
+    tellMyName(): void {
+        console.log(`I am ${this.name}`);
     }
 
-    tellMyAge(): string {
-        return `I am ${this.age} years old`;
+    tellMyAge(): void {
+        console.log(`I am ${this.age} years old`);
     }
 }
 
 const person1 = new Person('John', 40);
 const person2 = new Person('Marie', 35);
+
+
+person1.tellMyName();
+person1.tellMyAge();
+
+person2.tellMyName();
+person2.tellMyAge();
