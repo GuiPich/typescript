@@ -1,4 +1,4 @@
-import assert from 'assert';
+import * as assert from 'assert';
 
 // ... Ton code ici ...
 
@@ -11,10 +11,11 @@ class BankCustomer {
         this.pin = pin;
     }
 
-    getname(): void {
-        console.log(`${this.name}`);
+    getname(): string {
+        return this.name;
     }
-    verifyPinInput(a): boolean {
+    
+    verifyPinInput(a: string): boolean {
         if (this.pin === a) {
             return true;
         } else {
